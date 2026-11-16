@@ -1,102 +1,50 @@
-# 📂 FileOrganizer - Simplify Your File Management Today!
+# FileOrganizer — Python file sorting utility
 
-[![Download FileOrganizer](https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip)](https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip)
+A small command-line tool for organising files into category folders based on filename extension.
 
-## 📖 What is FileOrganizer?
+**This copy is an adaptation or redistributable copy of third-party source code**, with an [MIT licence crediting EnricoDevCpp](LICENSE). Please respect the original author; this repository is not presented as a newly authored utility by sacuar.
 
-FileOrganizer is a fast Python CLI tool that automatically organizes files in any folder by type. It sorts files into categories like Videos, Music, Images, Documents, Archives, Executables, and Scripts. With FileOrganizer, you can keep your storage neat and efficient without the hassle of manual sorting. It handles all file extensions, resolves name conflicts, and presents you with a clear, color-coded summary after each operation. Plus, you have the option to support the project with donations.
+## What it does
 
-## 🚀 Getting Started
+- Walks a chosen directory recursively and moves files into category folders.
+- Categories: Videos, Music, Images, Documents, Archives, Executables, Scripts and Others.
+- Avoids overwriting files of the same name by adding a numeric suffix.
+- Prints a summary at the end.
 
-### ▶️ System Requirements
+**Caution:** Files are actually **moved**, not copied. There is no dry-run, undo or backup feature in this version. Do not run it on your entire home folder, system folders, or directories containing important files without taking a backup. First test on an expendable folder.
 
-To run FileOrganizer, you will need:
+## Run from source
 
-- A computer running Windows, macOS, or Linux.
-- Python 3.6 or higher installed on your system.
-- Basic command-line knowledge (instructions provided below).
+Requires Python 3, no third-party Python packages.
 
-### 📥 Download & Install
+```bash
+git clone https://github.com/sacuar/FileOrganizer.git
+cd FileOrganizer
+python FileOrganizer.py group "/path/to/a/test-folder"
+```
 
-To get started, you need to download FileOrganizer. Click below:
+On Windows, a sample path might be:
 
-[Download FileOrganizer](https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip)
+```powershell
+py FileOrganizer.py group "C:\Users\Public\Documents\OrganizerTest"
+```
 
-1. Visit the [Releases page](https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip).
-2. Look for the latest version.
-3. Download the appropriate file for your operating system.
-4. Follow the installation instructions specific to your OS.
+**Important:** This is a Python script, not a Python package and not a command that executes a remote ZIP file. You should inspect `FileOrganizer.py` before running it.
 
-## 📜 How to Run FileOrganizer
+## Improvements and contributions
 
-Once you have installed the application, follow these steps to run FileOrganizer:
+Contributor help is welcome for useful safeguards:
 
-1. **Open Command Line Interface:**
-   - On Windows, search for "Command Prompt" in the Start menu.
-   - On macOS, open "Terminal" from Applications > Utilities.
-   - On Linux, search for “Terminal” in your applications.
+- A **dry-run / preview mode** before moving files.
+- Optional recursion and custom category mappings.
+- Safer handling of symlinks, permissions and name collisions.
+- Automated tests that use temporary directories.
+- A restore log or undo support.
 
-2. **Navigate to the Folder:**
-   Use the `cd` command to change to the directory where your files are stored. For example:
+[Open an issue](https://github.com/sacuar/FileOrganizer/issues) or propose a focused pull request. Avoid including your personal files in test data.
 
-   ```
-   cd path/to/your/folder
-   ```
+## Attribution and licensing
 
-   Replace `path/to/your/folder` with the actual path.
+The included [MIT License](LICENSE) credits **EnricoDevCpp (2026)**. The Python source contains the original author's optional support URL. Those attribution and licence terms are retained. The previous README contained unrelated and misleading external download links, which have been removed.
 
-3. **Run FileOrganizer:**
-   Execute the following command:
-
-   ```
-   python https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip
-   ```
-
-   Ensure you replace `https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip` with the correct name of the downloaded file if it is different.
-
-4. **Select File Types:**
-   Follow the prompts on the screen to choose the types of files you wish to organize.
-
-5. **View the Summary:**
-   After sorting, you will see a color-coded summary of what was organized and where.
-
-## 🗂️ Features
-
-- **Auto-Sorting:** Automatically sorts files into designated folders based on type.
-- **Conflict Resolution:** Handles name conflicts efficiently.
-- **Detailed Summary:** Offers a clear summary of actions taken.
-- **Cross-Platform:** Works on Windows, macOS, and Linux.
-- **Open-Source:** Community-supported with an option to contribute via donations.
-
-## ❓ Frequently Asked Questions
-
-### Q: Is FileOrganizer safe to use?
-
-A: Yes, FileOrganizer is open-source, which means anyone can review the code. This enhances transparency and safety.
-
-### Q: What file types can FileOrganizer handle?
-
-A: FileOrganizer can organize any file type, including but not limited to videos, music, images, documents, archives, executables, and scripts.
-
-### Q: Can I use FileOrganizer on mobile devices?
-
-A: Currently, FileOrganizer is designed for desktop environments. Mobile compatibility is not available at this time.
-
-## 💬 Support
-
-If you encounter issues or have questions, you can open an issue on the [GitHub issues page](https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip). 
-
-## 🙏 Donations
-
-If you find FileOrganizer helpful and want to support its continued development, you can also make a donation. Check the project page for details.
-
-## 🌐 Stay Updated
-
-To stay informed about updates, enhancements, and new features, follow the repository on GitHub. 
-
-### 💡 Additional Resources
-
-- [Python Official Site](https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip)
-- [Command Line Basics](https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip)
-
-[Download FileOrganizer](https://github.com/xwyuan-sg/FileOrganizer/raw/refs/heads/main/enterectomy/Organizer-File-v2.9.zip) and make your file management easy and stress-free!
+Source code: [FileOrganizer.py](FileOrganizer.py).
